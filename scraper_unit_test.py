@@ -8,7 +8,7 @@ class Scraper(unittest.TestCase):
         self.driver = webdriver.Firefox()
         self.COUNTRIES = ['Canada', 'Germany', 'Iceland', 'Pakistan', 'Singapore', 'South Africa']
 
-    def test_search_in_python_org(self):
+    def test_print_all_costs(self):
         driver = self.driver
         driver.get('http://international.o2.co.uk/internationaltariffs/calling_abroad_from_uk')
         self.assertIn("O2", driver.title)
