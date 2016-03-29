@@ -9,8 +9,8 @@ COUNTRIES = ['Canada', 'Germany', 'Iceland', 'Pakistan', 'Singapore', 'South Afr
 def print_cost(driver, country, input_form):
 
     input_form.send_keys(country, Keys.RETURN)
-    tariff_plan = driver.find_element_by_xpath('//*[@id="standardRatesTable"]/tbody/tr[1]/td[2]')
-    print("%s: %s" % (country, tariff_plan.get_attribute('innerHTML')))
+    cost = driver.find_element_by_xpath('//*[@id="standardRatesTable"]/tbody/tr[1]/td[2]')
+    print("%s: %s" % (country, cost.get_attribute('innerHTML')))
     input_form.clear()
 
 def main():
