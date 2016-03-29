@@ -1,8 +1,8 @@
-mport unittest
+import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-class PythonOrgSearch(unittest.TestCase):
+class Scraper(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Firefox()
@@ -25,7 +25,7 @@ class PythonOrgSearch(unittest.TestCase):
         tariff_plan = driver.find_element_by_xpath('//*[@id="standardRatesTable"]/tbody/tr[1]/td[2]')
         print("%s: %s" % (country, tariff_plan.get_attribute('innerHTML')))
         input_form.clear()
-        
+
     def tearDown(self):
         self.driver.close()
 
